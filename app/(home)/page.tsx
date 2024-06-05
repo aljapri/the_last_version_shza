@@ -18,7 +18,6 @@ export default function Home() {
         <GetDown />
       </main>
       <AboutUs />
-      {/* <Products/> */}
       <Gallery />
       <ContactUs />
     </div>
