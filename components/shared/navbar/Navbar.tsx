@@ -67,7 +67,9 @@ const Navbar = () => {
           })}
           <div className=" flex flex-row space-x-5 justify-center  ">
             <p className="cursor-pointer">
-              <Link href={`/ar`}>العربية</Link>
+              <Link href={`/ar`} className={`${scrolled && "text-gray-900"}`}>
+                العربية
+              </Link>
             </p>
             <Link href={`/en`}>english</Link>
           </div>
@@ -98,7 +100,9 @@ const Navbar = () => {
             </div>
             <div className=" flex flex-col space-x-5 justify-center  text-gray-900 ">
               <p className="cursor-pointer">
-                <Link href={`/ar`} className="text-gray-900">العربية</Link>
+                <Link href={`/ar`} className="text-gray-900">
+                  العربية
+                </Link>
               </p>
               <Link href={`/en`}>english</Link>
             </div>
