@@ -1,9 +1,9 @@
 import Image from "next/image";
-import breakFast from "../../../../public/image/breakfast.jpg";
+import qamar from "../../../../public/image/qamar.png";
 import ScrollAppear from "../../../shared/ScrollAppear";
 import { useTranslations } from "next-intl";
-export default function AboutUs() {
-      const t = useTranslations("AboutUs");
+export default function Qamar() {
+      const t = useTranslations("Qamar");
 
   return (
     <section className=" dark:bg-gray-900 flex flex-row   bg-blue  py-10 ">
@@ -22,17 +22,11 @@ export default function AboutUs() {
               </h3>
             </ScrollAppear>
 
-            <div className="mt-10 flex flex-col sm:flex-row justify-center md:justify-start">
-              {/* <ScrollAppear>
-                <button className="w-full sm:w-40 px-4 py-3 rounded font-semibold text-md bg-blue-500 text-white border-2 border-blue-500 text-sm">
-                  Get started
-                </button>
-              </ScrollAppear> */}
-            </div>
+            <div className="mt-10 flex flex-col sm:flex-row justify-center md:justify-start"></div>
           </div>
           <div className="w-full md:w-1/2 flex justify-center md:justify-end">
             <ScrollAppear>
-              <Image src={breakFast} width={1000} height={400} alt="image" />
+              <Image src={qamar} width={1000} height={400} alt="image" />
             </ScrollAppear>
           </div>
         </div>

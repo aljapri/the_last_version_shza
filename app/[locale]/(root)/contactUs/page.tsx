@@ -1,7 +1,7 @@
 "use client";
 
 import ContentInfo from "@/components/shared/ContentInfo";
-import ScrollAppear from "../../../components/shared/ScrollAppear";
+import ScrollAppear from "@/components/shared/ScrollAppear";
 import ContactUsForm from "@/components/form/ContactUsForm";
 
 export default function ContactUs() {

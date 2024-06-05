@@ -14,6 +14,9 @@ import {
   FiGlobe,
   FiYoutube,
 } from "react-icons/fi";
+import { useTranslations } from "next-intl";
+
+
 
 export const headerMenu = [
   {

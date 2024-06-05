@@ -1,10 +1,11 @@
 "use client";
+import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
 import { RiCloseLine, RiMenu3Line } from "react-icons/ri";
-import { headerMenu } from "../../../constants/index";
 import MenuSm from "./MenuSm";
-import "./navbar.css";
 import MenuXl from "./MenuXl";
+import "./navbar.css";
+import Link from "next/link";
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -20,6 +21,27 @@ const Navbar = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+  const t = useTranslations("NavBar");
+  const i = useTranslations("Index");
+
+  const headerMenu = [
+    {
+      name: t("main"),
+      link: "/",
+    },
+    {
+      name: t("aboutUs"),
+      link: "/aboutUs",
+    },
+    {
+      name: t("ourProduct"),
+      link: "products",
+    },
+    {
+      name: t("contactUs"),
+      link: "contactUs",
+    },
+  ];
   return (
     <div
       className={`gpt3__navbar fixed w-full z-50 ${
@@ -28,13 +50,21 @@ const Navbar = () => {
     >
       <div className={`gpt3__navbar-links w-full `}>
         <div className="gpt3__navbar-links_logo">
-          <h1 className="text-3xl">شذى الشام</h1>
+          <h1 className="text-3xl">{i("title")}</h1>
         </div>
         <div className="gpt3__navbar-links_container">
           {headerMenu.map((el) => {
-            return <MenuXl name={el.name} link={el.link} key={el.link} scrolled={scrolled} />;
+            return (
+              <MenuXl
+                name={el.name}
+                link={el.link}
+                key={el.link}
+                scrolled={scrolled}
+              />
+            );
           })}
         </div>
+        
       </div>
       {/* // return <MenuXl name={el.name} link={el.link} key={el.link} />; */}
       <div className="gpt3__navbar-menu">
