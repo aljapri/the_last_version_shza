@@ -9,7 +9,6 @@ import Wraq from "@/components/features/home/waraq/Wraq";
 import GetDown from "@/components/shared/GetDown";
 import Navbar from "@/components/shared/navbar/Navbar";
 import main_image from "@/public/image/main-image.jpg";
-import woraq from "@/public/image/woraq.jpg";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 
@@ -25,16 +24,10 @@ export default function Home() {
         <GetDown />
       </main>
       <AboutUs />
-      <Wraq
-        image={woraq}
-        direction="right"
-        title={t("title")}
-        text={t("content")}
-      />
+      <Wraq/>
       <Qamar />
       <Oil />
       <Cheese />
-      {/* <Gallery /> */}
       <ContactUs />
     </div>
   );

@@ -1,16 +1,21 @@
+"use client"
 import Link from "next/link";
 import ScrollAppear from "../ScrollAppear";
+import { useParams } from "next/navigation";
 
 export default function Menu({ name, link }: any) {
-  let delay = 0.5;
+  const params = useParams();
 
   return (
     <>
-        <li key={name}>
-          <Link href={link} className="mr-4 hover:underline md:mr-6 ">
-            {name}
-          </Link>
-        </li>
+      <li key={name}>
+        <Link
+          href={`/${params.locale}/${link}`}
+          className="mr-4 hover:underline md:mr-6 "
+        >
+          {name}
+        </Link>
+      </li>
     </>
   );
 }

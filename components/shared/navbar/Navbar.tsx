@@ -52,7 +52,13 @@ const Navbar = () => {
         className={`gpt3__navbar-links w-full  flex flex-row justify-center `}
       >
         <div className="gpt3__navbar-links_logo">
-          <h1 className="text-3xl">{i("title")}</h1>
+          <h1
+            className={`text-3xl ${
+              scrolled ? " text-gray-900":"text-gray-300"
+            }`}
+          >
+            {i("title")}
+          </h1>
         </div>
         <div className="gpt3__navbar-links_container ">
           {headerMenu.map((el) => {
@@ -71,7 +77,13 @@ const Navbar = () => {
                 العربية
               </Link>
             </p>
-            <Link href={`/en`}>english</Link>
+            <p></p>
+            <Link
+              href={`/en`}
+              className={`${scrolled ? "text-gray-900" : "text-gray-300"}`}
+            >
+              english
+            </Link>
           </div>
         </div>
       </div>

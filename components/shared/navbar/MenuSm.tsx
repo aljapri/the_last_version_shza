@@ -5,10 +5,7 @@ import React from 'react'
 export default function MenuSm({link,name}:any) {
   const params = useParams();
 
-  // Route -> /shop/[tag]/[item]
-  // URL -> /shop/shoes/nike-air-max-97
-  // `params` -> { tag: 'shoes', item: 'nike-air-max-97' }
-  console.log(params);
+
   return (
     <p key={link}>
       <Link

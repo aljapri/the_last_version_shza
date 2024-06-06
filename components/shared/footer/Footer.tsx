@@ -3,6 +3,8 @@ import { useTranslations } from "next-intl";
 import Menu from "./Menu";
 import SocialMedia from "./SocialMedia";
 import Link from "next/link";
+import Language from "./Language";
+import Authentication from "./Authentication";
 export default function Footer() {
   const t = useTranslations("NavBar");
   const f = useTranslations("Footer");
@@ -37,12 +39,7 @@ export default function Footer() {
           })}
         </ul>
         {/* ------------------------- */}
-        <div className=" flex flex-row space-x-5 w-full justify-center mt-5 ">
-          <p className="cursor-pointer">
-            <Link href={`/ar`}>العربية</Link>
-          </p>
-          <Link href={`/en`}>english</Link>
-        </div>
+        <Language/>
         <div className="w-full flex flex-row justify-center ">
           <ul className="flex flex-row gap-x-8">
             {socialLinks.map((link) => (
@@ -58,13 +55,7 @@ export default function Footer() {
           </ul>
         </div>
 
-        <div className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
-          © 2023-2024{" "}
-          <Link href="/" className="hover:underline">
-            شذى الشام
-          </Link>
-          . All Rights Reserved.
-        </div>
+        <Authentication/>
       </div>
     </footer>
   );

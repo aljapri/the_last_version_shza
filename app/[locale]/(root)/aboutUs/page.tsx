@@ -2,6 +2,8 @@
 import Image from "next/image";
 import "./aboutus.css";
 import { useTranslations } from "next-intl";
+import AboutUsImage from "@/components/features/aboutUs/AboutUsImage";
+import AboutUstitle from "@/components/features/aboutUs/AboutUstitle";
 export default function Page() {
     const t = useTranslations("AboutUspage");
   return (
@@ -9,60 +11,10 @@ export default function Page() {
       <div className="responsive-container-block bigContainer">
         <div className="responsive-container-block Container">
           <div className="responsive-container-block leftSide">
-            <p className="text-blk heading">{t("title")}</p>
-            <p className="text-blk subHeading">
-              {t("content")}
-            </p>
+            <AboutUstitle/>
           </div>
           <div className="responsive-container-block rightSide">
-            <Image
-              className="number1img"
-              src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/ET32.jpg"
-              alt="number1img"
-              width={200}
-              height={200}
-            />
-
-            <Image
-              className="number2img"
-              src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/d14.png"
-              alt="number1img"
-              width={200}
-              height={200}
-            />
-            <Image
-              className="number3img"
-              src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/b245.png"
-              alt="number1img"
-              width={200}
-              height={200}
-            />
-            <Image
-              className="number5img"
-              src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/Customer supports.png"
-              alt="number1img"
-              width={200}
-              height={200}
-            />
-            <iframe
-              className="number4vid"
-              //   poster="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/b242.png"
-              src="https://www.youtube.com/embed/svg%3E?"
-            ></iframe>
-            <Image
-              className="number7img"
-              src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/d51.png"
-              alt="number1img"
-              width={200}
-              height={200}
-            />
-            <Image
-              className="number6img"
-              src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/d12.png"
-              alt="number1img"
-              width={200}
-              height={200}
-            />
+            <AboutUsImage/>
           </div>
         </div>
       </div>
